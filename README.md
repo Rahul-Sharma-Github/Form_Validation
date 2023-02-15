@@ -12,11 +12,13 @@
 #
 #
 ## Registration/SignUp App UI with Validations =
-
+#
 ### (1)
-
+#
 <img src="https://user-images.githubusercontent.com/64002004/219004295-ea190f0b-f0aa-42a2-b1bc-612009b0c893.png" width="393" height="852">
-
+# 
+#
 ### (2)
+#
 <img src="https://user-images.githubusercontent.com/64002004/219004629-c2dd8714-7658-4a2e-9638-0169331318e8.png" width="393" height="852">
 
