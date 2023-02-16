@@ -42,6 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
+  // variable to control password visibility
+  bool isVisible = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -117,10 +120,26 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 20, horizontal: 10),
                       child: TextFormField(
+                        obscureText: isVisible,
                         controller: passwordController,
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
                           labelText: 'Password',
-                          border: OutlineInputBorder(),
+                          border: const OutlineInputBorder(),
+                          suffixIcon: InkWell(
+                            onTap: () {
+                              setState(() {
+                                if (isVisible) {
+                                  isVisible = false;
+                                } else {
+                                  isVisible = true;
+                                }
+                              });
+                            },
+                            child: Icon(
+                              Icons.remove_red_eye_rounded,
+                              color: isVisible ? Colors.grey : Colors.blue,
+                            ),
+                          ),
                         ),
                         validator: MultiValidator([
                           RequiredValidator(errorText: "Required"),
