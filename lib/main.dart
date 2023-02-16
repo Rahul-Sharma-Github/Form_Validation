@@ -138,6 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Icon(
                               Icons.remove_red_eye_rounded,
                               color: isVisible ? Colors.grey : Colors.blue,
+                              semanticLabel: 'Show / Hide Password',
                             ),
                           ),
                         ),
